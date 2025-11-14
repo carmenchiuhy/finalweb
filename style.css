@@ -1,0 +1,151 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    color: #1a2a3a;
+    margin: 0; 
+    padding: 0; 
+    font: 30px 'Epilogue', sans-serif;
+}
+
+header {
+    position: relative; 
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center;
+    background: white; /* Background color of the nav */
+    padding: 0.5em 2em; /* Reduced padding for a thinner nav */
+    position: sticky; /* Sticky positioning */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it stays above other content */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Optional, lighter shadow */
+    height: 60px; /* Optional: set a fixed height if needed */
+    font-family: "Epilogue-SemiBold", Helvetica;
+}
+
+.nav-links .subpage {
+    text-decoration: none;
+    color: #1a2a3a;
+    padding: 8px 15px; /* Adjusted padding for nav links */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    
+}
+
+.nav-links .subpage:hover {
+    background-color: #b84e27; /* Hover color */
+    color: white; /* Text color on hover */
+}
+
+.logo a {
+    color: #1a2a3a;
+    font-size: 20px; /* Adjust logo font size for a thinner look */
+    text-decoration: none; /* Remove underline */
+    font-family: "Epilogue-SemiBold", Helvetica;
+    font-weight: 600;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5em;
+    margin: 100px;
+}
+
+.text-container {
+    width: 70%; /* Adjust as needed */
+    font-family: "Epilogue-SemiBold", Helvetica;
+    font-size: 20px;
+    padding: 1px;
+}
+
+h1 {
+    font-family: 'Epilogue-SemiBold', Helvetica, sans-serif; 
+    font-weight: 600;
+    color: #1a2a3a;
+    font-size: 80px;
+    line-height: 90px;
+}
+
+h2 {
+    font-size: 28px; /* Adjusted for better readability */
+    color: #1a2a3a;
+}
+
+p {
+    font-family: 'Epilogue-SemiBold', Helvetica, sans-serif;
+    color: #1a2a3a;
+    font-size: 20px;
+    line-height: 1.5; /* Improved line spacing */
+}
+
+a {
+    text-decoration: none;
+    color: #1a2a3a;
+    font-family: 'Epilogue-SemiBold', Helvetica;
+    font-weight: 200;
+    color: #1a2a3a;
+    font-size: 20px;
+}
+
+button {
+    background-color: rgb(255, 181, 200);
+    border: 3px solid rgb(255, 255, 255);
+    padding: .75em 1em;
+    margin-top: 2em;
+    border-radius: .5em;
+    font-weight: 400;
+    font-family: 'Epilogue-SemiBold', Helvetica; /* Set font to Epilogue */
+    font-size: 20px; /* Adjust size if needed */
+    color: #1a2a3a; /* Optional: Set button text color */
+    transition: background-color 0.3s; /* Optional: Transition effect */
+}
+
+button:hover {
+    background-color: #b84e27; /* Optional: Change background on hover */
+    color: white; /* Optional: Change text color on hover */
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.box div {
+    border: solid 2px lightblue;
+    padding: 5px 100px;
+    font-size: 20px;
+    background-color: rgb(255, 181, 200);
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 100px 100px;
+    grid-template-columns: 100px 100px;
+    grid-gap: 1px;
+}
+
+.grid-item {
+    border: 1px solid #000;
+}
+
+#symbolmap, #node {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
