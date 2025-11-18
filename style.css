@@ -3,10 +3,11 @@ html {
 }
 
 * {
-    color: #1a2a3a;
+    /* color: #1a2a3a; */
     margin: 0; 
     padding: 0; 
-    font: 30px 'Epilogue', sans-serif;
+    font: 'Epilogue', sans-serif;
+    /* text-transform: uppercase; */
 }
 
 header {
@@ -37,7 +38,7 @@ nav {
 }
 
 .nav-links .subpage:hover {
-    background-color: #b84e27; /* Hover color */
+    background-color: #fd591e; /* Hover color */
     color: white; /* Text color on hover */
 }
 
@@ -62,7 +63,7 @@ nav {
     width: 70%; /* Adjust as needed */
     font-family: "Epilogue-SemiBold", Helvetica;
     font-size: 20px;
-    padding: 1px;
+    /* padding: 1px; */
 }
 
 h1 {
@@ -76,6 +77,13 @@ h1 {
 h2 {
     font-size: 28px; /* Adjusted for better readability */
     color: #1a2a3a;
+}
+
+h3 {
+    font-size: 80px; /* Adjusted for better readability */
+    color: transparent;
+    /* outline: 5px dotted green; */
+    -webkit-text-stroke : 2px #fd591e;
 }
 
 p {
@@ -149,3 +157,138 @@ button:hover {
     background-color: #ffffff;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+
+
+
+
+
+
+
+
+#project Section Styles
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .portfolio-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 60px;
+        }
+
+        .section-title {
+            flex: 1;
+            padding-top: 20px;
+        }
+
+        .section-title h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #2c3e50;
+            position: sticky;
+            top: 20px;
+        }
+
+        .projects-container {
+            flex: 2;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-image {
+            height: 350px; /* Increased from 220px to 300px */
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+
+        .project-content {
+            padding: 0 10px;
+        }
+
+        .project-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+
+        .project-label {
+            display: inline-block;
+            background: #e9ecef;
+            color: #495057;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+        }
+
+        .project-description {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 900px) {
+            .portfolio-section {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .section-title {
+                padding-right: 0;
+                margin-bottom: 10px;
+            }
+            
+            .section-title h2 {
+                position: static;
+                font-size: 2.5rem;
+            }
+            
+            .project-image {
+                height: 500px; /* Slightly smaller on tablets */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .projects-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .project-image {
+                height: 250px; /* Adjusted for mobile */
+            }
+        }
