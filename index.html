@@ -9,6 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/d3-geo@3"></script>
     <script src="https://d3js.org/topojson.v3.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
 
 
     <meta charset="UTF-8">
@@ -29,12 +30,12 @@
                 <a href="#top">Portfolio</a>
             </div>
             <div class="nav-links">
-                <a class="subpage" href="#experience">My Experience</a>
-                <a class="subpage" href="subpage/mywork.html">My Work</a>
+                <a class="subpage" href="#top">My Experience</a>
+                <a class="subpage" href="subpage/myskills.html">My Skills</a>
             </div>
         </nav>
 
-        <div class="flex-container">
+        <div id="top" class="flex-container">
             <div class="text-container">
                 <h2>Chiu Hoi Ying</h2>
                 <h1>Portfolio</h1>
@@ -44,10 +45,8 @@
         </div>
     </header>
 
-    <section id="tree">
-        <!-- <h2>Skills</h2> -->
-        
-    </section>
+    <section id="tree"></section>
+
     <section id="node">
         <h2>Work experiences</h2>
         
@@ -64,11 +63,66 @@
     </section>
 
 
+
+    
+    <div style="height: 10vh; display: flex; align-items: center; justify-content: center;">
+        <!-- <h2>Scroll down to see the skills visualization</h2> -->
+    </div>
+
+    <section id="scatterplot">
+        <div class="scatterplot-header">
+            <h2 class="scatterplot-title">Design & Creative Skills Matrix</h2>
+            <!-- <p class="scatterplot-subtitle">
+                Visualizing my creative and technical skills based on proficiency and experience. 
+                Hover over points for details and use filters to explore by category.
+            </p> -->
+        </div>
+        <div class="scatterplot-container">
+            <div id="chart"></div>
+            <div class="controls">
+                <button class="control-btn active" data-category="all">All Skills</button>
+                <button class="control-btn" data-category="Creative Technology">Creative Tech</button>
+                <button class="control-btn" data-category="design">Visual Design</button>
+                <button class="control-btn" data-category="Animation">Animation</button>
+                <button class="control-btn" data-category="tools">Design Tools</button>
+            </div>
+            <!-- Removed animation controls -->
+        </div>
+    </section>
+
+    <!-- <div class="content">
+            <div class="map-container">
+                <section id="map"></section>
+                
+                <div class="legend">
+                    <h3>Legend</h3>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: #e52d27;"></div>
+                        <span>Companies with known addresses</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: #3498db;"></div>
+                        <span>Companies with estimated locations</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-panel">
+                <h2>Companies in Hong Kong</h2>
+                <p>Hover over pins on the map to see company details</p>
+                
+                <div class="company-list" id="companyList">
+                     Company list will be populated by JavaScript 
+                </div>
+            </div>
+        </div> -->
     
 
 
     <script src="src/tree.js">  </script>
     <script src="src/node.js"></script>
     <script src="src/project.js"></script>    
+    <script src="src/scatterplot.js"></script>
+    
 
 </body>  
