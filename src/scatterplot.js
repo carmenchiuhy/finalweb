@@ -3,7 +3,7 @@
             // Creative Technology
             { skill: "HTML/CSS", proficiency: 6, experience: 1, category: "Creative Technology", description: "Building responsive web interfaces and layouts with modern CSS techniques" },
             { skill: "p5.js", proficiency: 7, experience: 1.2, category: "Creative Technology", description: "Creating interactive graphics and visualizations using creative coding" },
-            { skill: "Processing", proficiency: 5, experience: 0.5, category: "Creative Technology", description: "Developing generative art and computational design projects" },
+            { skill: "Processing", proficiency: 5, experience: 1, category: "Creative Technology", description: "Developing generative art and computational design projects" },
             { skill: "Java", proficiency: 5, experience: 1, category: "Creative Technology", description: "Object-oriented programming for creative applications and tools" },
             
             // Visual Design
@@ -11,7 +11,6 @@
             { skill: "Typography & Hierarchy", proficiency: 8, experience: 2.6, category: "design", description: "Creating effective type systems and visual information hierarchies" },
             { skill: "Color Theory & Psychology", proficiency: 8, experience: 2.3, category: "design", description: "Using color strategically to evoke emotions and improve usability" },
             { skill: "Interaction Design", proficiency: 7, experience: 2.0, category: "design", description: "Designing intuitive user interactions and seamless digital experiences" },
-            { skill: "Design Systems", proficiency: 6, experience: 1.5, category: "design", description: "Developing scalable design systems and component libraries" },
             
             // Animation
             { skill: "Character Animation", proficiency: 8, experience: 2.1, category: "Animation", description: "Creating lifelike character movements and expressive animations" },
@@ -22,8 +21,8 @@
             // Design Tools
             { skill: "Figma Design Systems", proficiency: 9, experience: 2.5, category: "tools", description: "Creating comprehensive design systems and prototypes in Figma" },
             { skill: "Maya", proficiency: 7, experience: 2, category: "tools", description: "3D modeling, animation, and rendering using Autodesk Maya" },
-            { skill: "Adobe Illustrator", proficiency: 7, experience: 1.8, category: "tools", description: "Creating vector illustrations and graphic designs" },
-            { skill: "Adobe Photoshop", proficiency: 6, experience: 2.5, category: "tools", description: "Photo editing, compositing, and digital painting" }
+            { skill: "Adobe Illustrator", proficiency: 7, experience: 2.5, category: "tools", description: "Creating vector illustrations and graphic designs" },
+            { skill: "Adobe Photoshop", proficiency: 7, experience: 2.5, category: "tools", description: "Photo editing, compositing, and digital painting" }
         ];
 
         // Set up dimensions and margins with expanded width

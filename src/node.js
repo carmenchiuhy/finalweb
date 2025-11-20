@@ -82,7 +82,7 @@ const linksData = [
 
 const container = d3.select("#node");
 const width = parseInt(container.style("width")) || 800;
-const height = parseInt(container.style("height")) || 600;
+const height = parseInt(container.style("height")) || 800;
 
 // Create SVG element
 const svg = container.append("svg")
@@ -123,14 +123,14 @@ const linksForViz = linksData.map(link => {
     };
 });
 
-// Force simulation
+// Force simulation with optimized stability
 const simulation = d3.forceSimulation(nodesData)
-    .force("link", d3.forceLink(linksForViz).id(d => d.id).distance(150))
-    .force("charge", d3.forceManyBody().strength(-500))
+    .force("link", d3.forceLink(linksForViz).id(d => d.id).distance(200))
+    .force("charge", d3.forceManyBody().strength(-400)) // Reduced repulsion for stability
     .force("center", d3.forceCenter(width / 2, height / 2))
-    .force("collide", d3.forceCollide().radius(d => (d.type === 'company' ? 80 : 50)))
-    .force("x", d3.forceX(width / 2).strength(0.05))
-    .force("y", d3.forceY(height / 2).strength(0.05));
+    .force("collide", d3.forceCollide().radius(d => (d.type === 'company' ? 90 : 60)).strength(0.8))
+    .force("x", d3.forceX(width / 2).strength(0.08)) // Balanced center force
+    .force("y", d3.forceY(height / 2).strength(0.08)); // Balanced center force
 
 // Create groups
 const linkGroup = svg.append("g").attr("class", "links");
@@ -302,13 +302,19 @@ node.on("mouseover", function(event, d) {
         .attr("stroke", d.fx ? "#ff6b6b" : "#fff");
 });
 
-// Tick function
+// Enhanced tick function with strict boundaries and velocity damping
 simulation.on("tick", () => {
-    const padding = 60;
+    const padding = 80;
     
     nodesData.forEach(d => {
-        d.x = Math.max(padding, Math.min(width - padding, d.x));
-        d.y = Math.max(padding, Math.min(height - padding, d.y));
+        // Strict boundary constraints with buffer
+        const nodeRadius = d.type === 'company' ? 40 : 30;
+        d.x = Math.max(nodeRadius + padding, Math.min(width - nodeRadius - padding, d.x));
+        d.y = Math.max(nodeRadius + padding, Math.min(height - nodeRadius - padding, d.y));
+        
+        // Dampen velocity for stability (reduces bouncing)
+        if (d.vx) d.vx *= 0.8;
+        if (d.vy) d.vy *= 0.8;
     });
 
     link
@@ -325,21 +331,30 @@ simulation.on("tick", () => {
         .attr("transform", d => `translate(${d.x}, ${d.y})`);
 });
 
-// Drag functions
+// Configure simulation for better stability
+simulation.alphaDecay(0.05); // Slower decay for smoother settling
+simulation.velocityDecay(0.4); // More velocity decay for less bouncing
+
+// Enhanced drag functions with boundary checking
 function drag(simulation) {
     function dragstarted(event, d) {
-        if (!event.active) simulation.alphaTarget(0.3).restart();
+        if (!event.active) simulation.alphaTarget(0.1).restart(); // Lower alpha target for stability
         d.fx = d.x;
         d.fy = d.y;
     }
 
     function dragged(event, d) {
-        d.fx = event.x;
-        d.fy = event.y;
+        const nodeRadius = d.type === 'company' ? 40 : 30;
+        const padding = 80;
+        
+        // Constrain dragging within boundaries
+        d.fx = Math.max(nodeRadius + padding, Math.min(width - nodeRadius - padding, event.x));
+        d.fy = Math.max(nodeRadius + padding, Math.min(height - nodeRadius - padding, event.y));
     }
 
     function dragended(event, d) {
         if (!event.active) simulation.alphaTarget(0);
+        // Release node after dragging for natural movement
         d.fx = null;
         d.fy = null;
     }
@@ -374,5 +389,11 @@ function wrap(text, width) {
         }
     });
 }
+
+// Add stabilization timeout - let the simulation run for a bit then slow it down
+setTimeout(() => {
+    simulation.alphaDecay(0.02); // Even slower decay after initial layout
+    simulation.velocityDecay(0.6); // More damping after initial layout
+}, 2000);
 
 })();
