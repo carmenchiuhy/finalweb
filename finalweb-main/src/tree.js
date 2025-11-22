@@ -8,119 +8,109 @@ document.addEventListener('DOMContentLoaded', function() {
         children: [
             {
                 name: "Web Design",
-                color: "#1abc9c",
+                color: "#009c24ff",
                 description: "Creating visually appealing and functional web interfaces",
                 children: [
                     { 
                         name: "Figma", 
-                        color: "#9b59b6",
+                        color: "#37d45bff",
                         description: "UI/UX design and prototyping tool",
                         value: 20,
                         children: [
-                            { name: "Prototyping", value: 10, color: "#8e44ad", description: "Creating interactive prototypes" },
-                            { name: "Design Systems", value: 10, color: "#8e44ad", description: "Building consistent design frameworks" }
-                        ]
-                    },
-                    { 
-                        name: "Webflow", 
-                        color: "#3498db",
-                        description: "No-code website builder with CMS",
-                        value: 20,
-                        children: [
-                            { name: "CMS Collections", value: 10, color: "#2980b9", description: "Structuring and managing content" },
-                            { name: "Animations", value: 10, color: "#2980b9", description: "Creating engaging interactions" }
+                            { name: "Prototyping", value: 10, color: "#a0d4acff", description: "Creating interactive prototypes" },
+                            { name: "Design Systems", value: 10, color: "#a0d4acff", description: "Building consistent design frameworks" }
                         ]
                     },
                     { 
                         name: "HTML/CSS/JS", 
-                        color: "#e74c3c",
+                        color: "#7bea95ff",
                         description: "Front-end web development",
                         value: 20,
                         children: [
-                            { name: "Responsive Layouts", value: 20, color: "#c0392b", description: "Creating adaptable designs for all devices" }
+                            { name: "Responsive Layouts", value: 20, color: "#a0d4acff", description: "Creating adaptable designs for all devices" }
                         ]
                     }
                 ]
             },
             {
                 name: "UX/UI",
-                color: "#f39c12",
+                color: "#ff8000ff",
                 description: "Designing user-centered interfaces and experiences",
                 children: [
-                    { name: "User Research", value: 15, color: "#e67e22", description: "Understanding user needs and behaviors" },
-                    { name: "Journey Mapping", value: 15, color: "#e67e22", description: "Visualizing user interactions with products" },
-                    { name: "Wireframing", value: 15, color: "#e67e22", description: "Creating structural layouts for interfaces" },
-                    { name: "Persona Creation", value: 15, color: "#e67e22", description: "Developing user archetypes for design focus" }
+                    { name: "User Research", value: 15, color: "#ff9a41ff", description: "Understanding user needs and behaviors" },
+                    { name: "Journey Mapping", value: 15, color: "#ff9a41ff", description: "Visualizing user interactions with products" },
+                    // { name: "Wireframing", value: 15, color: "ff9a41ff", description: "Creating structural layouts for interfaces" },
+                    { name: "Persona Creation", value: 15, color: "#ff9a41ff", description: "Developing user archetypes for design focus" }
                 ]
             },
             {
                 name: "Graphic Design",
-                color: "#2ecc71",
+                color: "#463aebff",
                 description: "Developing visual concepts and communication materials",
                 children: [
                     { 
                         name: "Procreate", 
-                        color: "#e74c3c",
+                        color: "#736cd9ff",
                         description: "Digital illustration on iPad",
                         value: 20,
                         children: [
-                            { name: "Digital Painting", value: 10, color: "#c0392b", description: "Creating artwork with digital tools" },
-                            { name: "Illustration", value: 10, color: "#c0392b", description: "Producing custom illustrations" }
+                            { name: "Digital Painting", value: 10, color: "#a8a2ffff", description: "Creating artwork with digital tools" },
+                            { name: "Illustration", value: 10, color: "#a8a2ffff", description: "Producing custom illustrations" }
                         ]
                     },
                     { 
                         name: "Adobe Illustrator", 
-                        color: "#f39c12",
+                        color: "#4d46afff",
                         description: "Vector graphics and logo design",
                         value: 20,
                         children: [
-                            { name: "Vector Graphics", value: 10, color: "#e67e22", description: "Creating scalable graphic elements" },
-                            { name: "Logo Design", value: 10, color: "#e67e22", description: "Designing brand identities" }
+                            { name: "Vector Graphics", value: 10, color: "#a29fc8ff", description: "Creating scalable graphic elements" },
+                            { name: "Logo Design", value: 10, color: "#a29fc8ff", description: "Designing brand identities" }
                         ]
                     },
                     { 
                         name: "Adobe Photoshop", 
-                        color: "#3498db",
+                        color: "#3440c4ff",
                         description: "Image editing and manipulation",
                         value: 20,
                         children: [
-                            { name: "Photo Manipulation", value: 20, color: "#2980b9", description: "Editing and enhancing photographs" }
+                            { name: "Photo Manipulation", value: 20, color: "#4d58ceff", description: "Editing and enhancing photographs" }
                         ]
                     }
                 ]
             },
             {
                 name: "3D & Animation",
-                color: "#9b59b6",
+                color: "#c13a79ff",
                 description: "Creating three-dimensional models and animations",
                 children: [
                     { 
                         name: "Autodesk Maya", 
-                        color: "#1abc9c",
+                        color: "#ff479dff",
                         description: "3D modeling and animation software",
                         value: 20,
                         children: [
-                            { name: "3D Modeling", value: 10, color: "#16a085", description: "Creating three-dimensional objects" },
-                            { name: "Character Rigging", value: 10, color: "#16a085", description: "Preparing models for animation" }
+                            { name: "3D Modeling", value: 10, color: "#ff74b5ff", description: "Creating three-dimensional objects" },
+                            { name: "Character Rigging", value: 10, color: "#ff74b5ff", description: "Preparing models for animation" }
                         ]
                     },
                     { 
                         name: "Blender", 
-                        color: "#e74c3c",
+                        color: "#af507dff",
                         description: "Open-source 3D creation suite",
                         value: 20,
                         children: [
-                            { name: "Sculpting", value: 10, color: "#c0392b", description: "Digital clay modeling" },
-                            { name: "Eevee Rendering", value: 10, color: "#c0392b", description: "Real-time rendering engine" }
+                            { name: "Sculpting", value: 10, color: "#b26b8cff", description: "Digital clay modeling" },
+                            { name: "Renderman Rendering", value: 10, color: "#b26b8cff", description: "Real-time rendering engine" }
                         ]
                     },
                     { 
                         name: "After Effects", 
-                        color: "#f39c12",
+                        color: "#6e1d43ff",
                         description: "Motion graphics and visual effects",
                         value: 20,
                         children: [
-                            { name: "Motion Graphics", value: 20, color: "#e67e22", description: "Creating animated graphic design" }
+                            { name: "Motion Graphics", value: 20, color: "#7c4b62ff", description: "Creating animated graphic design" }
                         ]
                     }
                 ]
@@ -133,28 +123,26 @@ document.addEventListener('DOMContentLoaded', function() {
         // Clear any existing SVG
         d3.select("#tree").select("svg").remove();
         
-        // Get the tree container - use fixed size or container dimensions
+        // Get the tree container and use larger dimensions
         const treeContainer = document.getElementById('tree');
-        const containerWidth = treeContainer.clientWidth || 500;
-        const containerHeight = treeContainer.clientHeight || 500;
+        const containerWidth = treeContainer.clientWidth || 800;
+        const containerHeight = treeContainer.clientHeight || 600;
         
-        console.log("Container dimensions:", containerWidth, containerHeight); // Debug log
+        console.log("Container dimensions:", containerWidth, containerHeight);
         
-        // Set up dimensions - use fixed size to ensure visibility
-        const size = Math.min(containerWidth, containerHeight);
-        const width = size;
-        const height = size;
-        const radius = Math.min(width, height) / 2 - 10; // Add some padding
+        // Set up dimensions - using larger values for bigger diagram
+        const width = containerWidth;
+        const height = containerHeight;
+        const radius = Math.min(width, height) / 2 - 40; // Increased padding for larger diagram
 
-        // Create SVG inside the tree section
+        // Create SVG inside the tree section with larger dimensions
         const svg = d3.select("#tree")
             .append("svg")
-            .attr("width", containerWidth)
-            .attr("height", containerHeight)
-            .style("background", "#f8f9fa") // Add background to see the SVG
+            .attr("width", width)
+            .attr("height", height)
             .style("border-radius", "8px")
             .append("g")
-            .attr("transform", `translate(${containerWidth/2},${containerHeight/2})`);
+            .attr("transform", `translate(${width/2},${height/2})`);
 
         // Create tooltip
         const tooltip = d3.select("body")
@@ -233,7 +221,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     .style("opacity", 0);
             });
 
-        // Add text labels
+        // Add text labels with larger font for better readability
         const text = svg.selectAll("text")
             .data(root.descendants().filter(d => d.depth && (d.y1 - d.y0) * (d.x1 - d.x0) > 0.03))
             .enter()
@@ -247,7 +235,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .attr("text-anchor", "middle")
             .attr("pointer-events", "none")
             .text(d => d.data.name)
-            .style("font-size", "10px")
+            .style("font-size", "12px") // Increased font size
             .style("font-weight", "bold")
             .style("fill", "white")
             .style("text-shadow", "1px 1px 2px rgba(0,0,0,0.5)");

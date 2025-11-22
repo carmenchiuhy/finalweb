@@ -30,8 +30,7 @@
             }
         ];
 
-        // Use D3.js to create project cards
-        const container = d3.select("#projects-container");
+       const container = d3.select("#projects-container");
 
         const projectCards = container.selectAll(".project-card")
             .data(projects)
@@ -62,3 +61,41 @@
         projectContent.append("p")
             .attr("class", "project-description")
             .text(d => d.description);
+
+        // Animation function
+        function initScrollAnimations() {
+            // Elements to animate
+            const sectionTitle = document.querySelector('.section-title h4');
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            // Create an Intersection Observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Add the 'animate' class when the element is in the viewport
+                        entry.target.classList.add('animate');
+                        
+                        // Stop observing after animation is triggered
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.2, // Trigger when 20% of the element is visible
+                rootMargin: '0px 0px -50px 0px' // Adjust trigger point slightly upward
+            });
+            
+            // Start observing all elements
+            if (sectionTitle) {
+                observer.observe(sectionTitle);
+            }
+            
+            projectCards.forEach(card => {
+                observer.observe(card);
+            });
+        }
+
+        // Initialize animations after DOM is loaded and projects are rendered
+        document.addEventListener('DOMContentLoaded', function() {
+            // Small delay to ensure D3 has rendered the projects
+            setTimeout(initScrollAnimations, 100);
+        });

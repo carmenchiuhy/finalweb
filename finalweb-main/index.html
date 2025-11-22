@@ -3,6 +3,9 @@
     <link href="style.css" rel="stylesheet" 
     width="200" 
     height="400"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
 
@@ -30,48 +33,58 @@
                 <a href="#top">Portfolio</a>
             </div>
             <div class="nav-links">
-                <a class="subpage" href="#top">My Experience</a>
+                <a class="subpage" href="#node">My Experience</a>
                 <a class="subpage" href="subpage/myskills.html">My Skills</a>
             </div>
         </nav>
 
         <div id="top" class="flex-container">
             <div class="text-container">
-                <h2>Chiu Hoi Ying</h2>
-                <h1>Portfolio</h1>
-                <h3>Designer</h3>
+                <h2>Chiu Hoi Ying </h2>
+                <!-- <h1>Portfolio</h1> -->
+                <h6>Designer</h6>
+                
                 <p>Creative Media student experienced in design, 3D animation, and digital illustration. </p>
             </div>
         </div>
-    </header>
-
-    <section id="tree"></section>
-
-    <section id="node">
-        <h2>Work experiences</h2>
-        
-    </section>
-
-
-    <section class="project">
-        <div class="section-title">
-            <h2>Recent Works</h2>
-        </div>
-        <div class="projects-container" id="projects-container">
-            <!-- Projects will be dynamically added here with D3.js -->
-        </div>
-    </section>
-
 
 
     
-    <div style="height: 10vh; display: flex; align-items: center; justify-content: center;">
+
+        <section class="grid grid-1">
+            <figure>
+                <img src="images/flower.png" alt="" class="autoRotate">
+                <img src="images/flower.png" alt="" class="autoRotate">
+                <img src="images/flower.png" alt="" class="autoRotate">
+                <!-- <img src="images/flower.png" alt="" class="autoRotate"> -->
+            </figure>
+            
+        </section>
+
+    </header>
+
+
+
+    <section id="intro" class="intro-section">
+    <div class="intro-rectangle">
+        <h1 class="intro-title">Welcome</h1>
+        <p class="intro-text">
+       I am a visual storyteller and digital artist passionate about bringing ideas to life through animation, illustration, and thoughtful design. My skills span from 3D modeling in Houdini to UI/UX design in Figma, driven by a curiosity for diverse media and a collaborative spirit. I thrive on creating innovative projects that engage and inspire.
+        </p>
+    </div>
+</section>
+
+
+
+    <!-- <section id="tree"></section> -->
+
+     <div style="height: 0vh; display: flex; align-items: center; justify-content: center;">
         <!-- <h2>Scroll down to see the skills visualization</h2> -->
     </div>
 
     <section id="scatterplot">
         <div class="scatterplot-header">
-            <h2 class="scatterplot-title">Design & Creative Skills Matrix</h2>
+            <h4 class="scatterplot-title">Design & Creative Skills Matrix</h4>
             <!-- <p class="scatterplot-subtitle">
                 Visualizing my creative and technical skills based on proficiency and experience. 
                 Hover over points for details and use filters to explore by category.
@@ -90,6 +103,28 @@
         </div>
     </section>
 
+
+
+
+    <section id="node">
+        <h4>Work experiences</h4>
+        
+    </section>
+
+
+    <section class="project">
+        <div class="section-title">
+            <h4>Recent Works</h4>
+        </div>
+        <div class="projects-container" id="projects-container">
+            <!-- Projects will be dynamically added here with D3.js -->
+        </div>
+    </section>
+
+
+
+    
+   
 
 <!-- slider -->
     <div class="slider" reverse="true" style="
@@ -117,36 +152,24 @@
 
     
 
-
-    <!-- <div class="content">
-            <div class="map-container">
-                <section id="map"></section>
-                
-                <div class="legend">
-                    <h3>Legend</h3>
-                    <div class="legend-item">
-                        <div class="legend-color" style="background-color: #e52d27;"></div>
-                        <span>Companies with known addresses</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="legend-color" style="background-color: #3498db;"></div>
-                        <span>Companies with estimated locations</span>
-                    </div>
+ <section class="contact-section">
+        <div class="contact-container">
+            <h5 class="contact-title">Contact</h5>
+            <div class="contact-details-simple">
+                <div class="contact-detail-item">
+                    <strong>Email:</strong>
+                    eechiuhy@gmail.com
+                </div>
+                <div class="contact-detail-item">
+                    <strong>Phone:</strong>
+                    98855317
                 </div>
             </div>
-            
-            <div class="info-panel">
-                <h2>Companies in Hong Kong</h2>
-                <p>Hover over pins on the map to see company details</p>
-                
-                <div class="company-list" id="companyList">
-                     Company list will be populated by JavaScript 
-                </div>
-            </div>
-        </div> -->
-    
+        </div>
+    </section>
+ 
 
-
+    <script src="src/intro.js"></script>
     <script src="src/tree.js">  </script>
     <script src="src/node.js"></script>
     <script src="src/project.js"></script>    
